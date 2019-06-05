@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="df341a44c3eff961352c37222a863784"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="f2">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="//st.codeforces.com/s/44651/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="//st.codeforces.com/s/44651/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Problems - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Problems - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" type="image/png" href="//st.codeforces.com/s/44651/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/community.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//st.codeforces.com/s/44651/css/sidebar-menu.css" type="text/css" charset="utf-8" />
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    </script>
+    <script type="text/javascript" async
+            src="https://assets.codeforces.com/mathjax/MathJax.js?config=TeX-AMS_HTML-full"
+    >
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/pushstream.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/facebox.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/autosize.min.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/895ad019dad63bbf5fb2506c13b7344f/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/codeforces.js?v=20160131"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/EventCatcher.js?v=20160131"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/js/preparedVerdictFormats-en.js"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//st.codeforces.com/s/44651/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="//st.codeforces.com/s/44651/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body><span style='display:none;' class='csrf-token' data-csrf='df341a44c3eff961352c37222a863784'>&nbsp;</span>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 1000
+        });
+    }, 0);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 180 * 1000 : 360 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "Mn619";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr")) {
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+        // console.log("Got announcement from channel");
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+<div style="width: 950px; margin: 0 auto;" class="compact-problemset">
+    <div id="header" style="position: relative;">
+        <div style="float:left;">
+            <div style="padding:0.5em 0 0 2px;color:#00a651;">
+<a href="/harbourspace"><img style="position:relative; bottom:6px;" src="//assets.codeforces.com/images/hsu.png"/></a>
+</div>
+
+        </div>
+        <div class="lang">
+            <div style="text-align: right;">
+                <a href="?locale=en"><img src="//st.codeforces.com/s/44651/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+                <a href="?locale=ru"><img src="//st.codeforces.com/s/44651/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+            </div>
+        </div>
+        <br style="clear: both;"/>
+    </div>
+
+    <div style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5em;"
+         class="caption">Educational Codeforces Round 19</div>
+    <div style="border-top: 1px solid #ccc; height: 1em;"></div>
+
+    <div class="problem-frames">
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+    <style>
+        .input-output-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .input-output-copier:hover {
+            background-color: #def;
+        }
+
+        .test-explanation textarea {
+            width: 100%;
+            height: 1.5em;
+        }
+    </style>
+
+<div class="problemindexholder" problemindex="A">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">A. k-Factorization</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>Given a positive integer <span class="tex-span"><i>n</i></span>, find <span class="tex-span"><i>k</i></span> integers (not necessary distinct) such that all these integers are strictly greater than <span class="tex-span">1</span>, and their product is equal to <span class="tex-span"><i>n</i></span>.</p></div><div class="input-specification"><div class="section-title">Input</div><p>The first line contains two integers <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>k</i></span> (<span class="tex-span">2 ≤ <i>n</i> ≤ 100000</span>, <span class="tex-span">1 ≤ <i>k</i> ≤ 20</span>).</p></div><div class="output-specification"><div class="section-title">Output</div><p>If it's impossible to find the representation of <span class="tex-span"><i>n</i></span> as a product of <span class="tex-span"><i>k</i></span> numbers, print <span class="tex-font-style-tt">-1</span>.</p><p>Otherwise, print <span class="tex-span"><i>k</i></span> integers in any order. Their product must be equal to <span class="tex-span"><i>n</i></span>. If there are multiple answers, print any of them.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>100000 2<br /></pre></div><div class="output"><div class="title">Output</div><pre>2 50000 <br /></pre></div><div class="input"><div class="title">Input</div><pre>100000 20<br /></pre></div><div class="output"><div class="title">Output</div><pre>-1<br /></pre></div><div class="input"><div class="title">Input</div><pre>1024 5<br /></pre></div><div class="output"><div class="title">Output</div><pre>2 64 2 2 2 <br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+        String.prototype.replaceAll = function (search, replace) {
+            return this.split(search).join(replace);
+        };
+
+        $(".sample-test .title").each(function() {
+            var preId = ("id" + Math.random()).replaceAll(".", "0");
+            var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+            $(this).parent().find("pre").attr("id", preId);
+            var $copy = $("<div title='Copy' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='input-output-copier'>Copy</div>");
+            $(this).append($copy);
+
+            var clipboard = new Clipboard('#' + cpyId, {
+                text: function(trigger) {
+                    return document.querySelector('#' + preId).innerText;
+                }
+            });
+
+            var isInput = $(this).parent().hasClass("input");
+
+            clipboard.on('success', function(e) {
+                if (isInput) {
+                    Codeforces.showMessage("The example input has been copied into the clipboard");
+                } else {
+                    Codeforces.showMessage("The example output has been copied into the clipboard");
+                }
+                e.clearSelection();
+            });
+        });
+
+        autosize($('.test-explanation textarea'));
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="B">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">B. Odd sum</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>You are given sequence <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span> of integer numbers of length <span class="tex-span"><i>n</i></span>. Your task is to find such subsequence that its sum is odd and maximum among all such subsequences. It's guaranteed that given sequence contains subsequence with odd sum.</p><p>Subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.</p><p>You should write a program which finds sum of the best subsequence.</p></div><div class="input-specification"><div class="section-title">Input</div><p>The first line contains integer number <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 10<sup class="upper-index">5</sup></span>).</p><p>The second line contains <span class="tex-span"><i>n</i></span> integer numbers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span> (<span class="tex-span"> - 10<sup class="upper-index">4</sup> ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">4</sup></span>). The sequence contains at least one subsequence with odd sum.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print sum of resulting subseqeuence.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>4<br />-2 2 -3 1<br /></pre></div><div class="output"><div class="title">Output</div><pre>3<br /></pre></div><div class="input"><div class="title">Input</div><pre>3<br />2 -5 -3<br /></pre></div><div class="output"><div class="title">Output</div><pre>-1<br /></pre></div></div></div><div class="note"><div class="section-title">Note</div><p>In the first example sum of the second and the fourth elements is <span class="tex-span">3</span>.</p></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="C">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">C. Minimal string</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>Petya recieved a gift of a string <span class="tex-span"><i>s</i></span> with length up to <span class="tex-span">10<sup class="upper-index">5</sup></span> characters for his birthday. He took two more empty strings <span class="tex-span"><i>t</i></span> and <span class="tex-span"><i>u</i></span> and decided to play a game. This game has two possible moves:</p><ul> <li> Extract the <span class="tex-font-style-bf">first</span> character of <span class="tex-span"><i>s</i></span> and append <span class="tex-span"><i>t</i></span> with this character. </li><li> Extract the <span class="tex-font-style-bf">last</span> character of <span class="tex-span"><i>t</i></span> and append <span class="tex-span"><i>u</i></span> with this character. </li></ul><p>Petya wants to get strings <span class="tex-span"><i>s</i></span> and <span class="tex-span"><i>t</i></span> empty and string <span class="tex-span"><i>u</i></span> lexicographically minimal.</p><p>You should write a program that will help Petya win the game.</p></div><div class="input-specification"><div class="section-title">Input</div><p>First line contains non-empty string <span class="tex-span"><i>s</i></span> (<span class="tex-span">1 ≤ |<i>s</i>| ≤ 10<sup class="upper-index">5</sup></span>), consisting of lowercase English letters.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print resulting string <span class="tex-span"><i>u</i></span>.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>cab<br /></pre></div><div class="output"><div class="title">Output</div><pre>abc<br /></pre></div><div class="input"><div class="title">Input</div><pre>acdb<br /></pre></div><div class="output"><div class="title">Output</div><pre>abdc<br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="D">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">D. Broken BST</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>Let <span class="tex-span"><i>T</i></span> be arbitrary binary tree — tree, every vertex of which has no more than two children. Given tree is rooted, so there exists only one vertex which doesn't have a parent — it's the root of a tree. Every vertex has an integer number written on it. Following algorithm is run on every value from the tree <span class="tex-span"><i>T</i></span>:</p><ol> <li> Set pointer to the root of a tree. </li><li> Return success if the value in the current vertex is equal to the number you are looking for </li><li> Go to the left child of the vertex if the value in the current vertex is greater than the number you are looking for </li><li> Go to the right child of the vertex if the value in the current vertex is less than the number you are looking for </li><li> Return fail if you try to go to the vertex that doesn't exist </li></ol><p>Here is the pseudo-code of the described algorithm: </p><pre><br />bool find(TreeNode t, int x) {<br />    if (t == null)<br />        return false;<br />    if (t.value == x)<br />        return true;<br />    if (x &lt; t.value)<br />        return find(t.left, x);<br />    else<br />        return find(t.right, x);<br />}<br />find(root, x);<br /></pre><p>The described algorithm works correctly if the tree is binary search tree (i.e. for each node the values of left subtree are less than the value in the node, the values of right subtree are greater than the value in the node). But it can return invalid result if tree is not a binary search tree.</p><p>Since the given tree is not necessarily a binary search tree, not all numbers can be found this way. Your task is to calculate, how many times the search will fail being running on every value from the tree.</p><p>If the tree has multiple vertices with the same values on them then you should run algorithm on every one of them separately.</p></div><div class="input-specification"><div class="section-title">Input</div><p>First line contains integer number <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 10<sup class="upper-index">5</sup></span>) — number of vertices in the tree.</p><p>Each of the next <span class="tex-span"><i>n</i></span> lines contains <span class="tex-span">3</span> numbers <span class="tex-span"><i>v</i></span>, <span class="tex-span"><i>l</i></span>, <span class="tex-span"><i>r</i></span> (<span class="tex-span">0 ≤ <i>v</i> ≤ 10<sup class="upper-index">9</sup></span>) — value on current vertex, index of the left child of the vertex and index of the right child of the vertex, respectively. If some child doesn't exist then number <span class="tex-span"> - 1</span> is set instead. Note that different vertices of the tree may contain the same values.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print number of times when search algorithm will fail.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>3<br />15 -1 -1<br />10 1 3<br />5 -1 -1<br /></pre></div><div class="output"><div class="title">Output</div><pre>2<br /></pre></div><div class="input"><div class="title">Input</div><pre>8<br />6 2 3<br />3 4 5<br />12 6 7<br />1 -1 8<br />4 -1 -1<br />5 -1 -1<br />14 -1 -1<br />2 -1 -1<br /></pre></div><div class="output"><div class="title">Output</div><pre>1<br /></pre></div></div></div><div class="note"><div class="section-title">Note</div><p>In the example the root of the tree in vertex <span class="tex-span">2</span>. Search of numbers <span class="tex-span">5</span> and <span class="tex-span">15</span> will return fail because on the first step algorithm will choose the subtree which doesn't contain numbers you are looking for.</p></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 2em;"
+        >
+
+
+<div class="problemindexholder" problemindex="E">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">E. Array Queries</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p><span class="tex-span"><i>a</i></span> is an array of <span class="tex-span"><i>n</i></span> positive integers, all of which are not greater than <span class="tex-span"><i>n</i></span>.</p><p>You have to process <span class="tex-span"><i>q</i></span> queries to this array. Each query is represented by two numbers <span class="tex-span"><i>p</i></span> and <span class="tex-span"><i>k</i></span>. Several operations are performed in each query; each operation changes <span class="tex-span"><i>p</i></span> to <span class="tex-span"><i>p</i> + <i>a</i><sub class="lower-index"><i>p</i></sub> + <i>k</i></span>. There operations are applied until <span class="tex-span"><i>p</i></span> becomes greater than <span class="tex-span"><i>n</i></span>. The answer to the query is the number of performed operations.</p></div><div class="input-specification"><div class="section-title">Input</div><p>The first line contains one integer <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 100000)</span>.</p><p>The second line contains <span class="tex-span"><i>n</i></span> integers — elements of <span class="tex-span"><i>a</i></span> (<span class="tex-span">1 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ <i>n</i></span> for each <span class="tex-span"><i>i</i></span> from <span class="tex-span">1</span> to <span class="tex-span"><i>n</i></span>).</p><p>The third line containts one integer <span class="tex-span"><i>q</i></span> <span class="tex-span">(1 ≤ <i>q</i> ≤ 100000)</span>.</p><p>Then <span class="tex-span"><i>q</i></span> lines follow. Each line contains the values of <span class="tex-span"><i>p</i></span> and <span class="tex-span"><i>k</i></span> for corresponding query <span class="tex-span">(1 ≤ <i>p</i>, <i>k</i> ≤ <i>n</i>)</span>.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print <span class="tex-span"><i>q</i></span> integers, <span class="tex-span"><i>i</i></span>th integer must be equal to the answer to <span class="tex-span"><i>i</i></span>th query.</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>3<br />1 1 1<br />3<br />1 1<br />2 1<br />3 1<br /></pre></div><div class="output"><div class="title">Output</div><pre>2<br />1<br />1<br /></pre></div></div></div><div class="note"><div class="section-title">Note</div><p>Consider first example:</p><p>In first query after first operation <span class="tex-span"><i>p</i> = 3</span>, after second operation <span class="tex-span"><i>p</i> = 5</span>.</p><p>In next two queries <span class="tex-span"><i>p</i></span> is greater than <span class="tex-span"><i>n</i></span> after the first operation.</p></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div
+                    style="margin-bottom: 1em;"
+        >
+
+
+<div class="problemindexholder" problemindex="F">
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">F. Mice and Holes</div><div class="time-limit"><div class="property-title">time limit per test</div>1.5 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>One day Masha came home and noticed <span class="tex-span"><i>n</i></span> mice in the corridor of her flat. Of course, she shouted loudly, so scared mice started to run to the holes in the corridor.</p><p>The corridor can be represeted as a numeric axis with <span class="tex-span"><i>n</i></span> mice and <span class="tex-span"><i>m</i></span> holes on it. <span class="tex-span"><i>i</i></span>th mouse is at the coordinate <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span>, and <span class="tex-span"><i>j</i></span>th hole — at coordinate <span class="tex-span"><i>p</i><sub class="lower-index"><i>j</i></sub></span>. <span class="tex-span"><i>j</i></span>th hole has enough room for <span class="tex-span"><i>c</i><sub class="lower-index"><i>j</i></sub></span> mice, so not more than <span class="tex-span"><i>c</i><sub class="lower-index"><i>j</i></sub></span> mice can enter this hole.</p><p>What is the minimum sum of distances that mice have to go through so that they all can hide in the holes? If <span class="tex-span"><i>i</i></span>th mouse goes to the hole <span class="tex-span"><i>j</i></span>, then its distance is <span class="tex-span">|<i>x</i><sub class="lower-index"><i>i</i></sub> - <i>p</i><sub class="lower-index"><i>j</i></sub>|</span>.</p><p>Print the minimum sum of distances.</p></div><div class="input-specification"><div class="section-title">Input</div><p>The first line contains two integer numbers <span class="tex-span"><i>n</i></span>, <span class="tex-span"><i>m</i></span> (<span class="tex-span">1 ≤ <i>n</i>, <i>m</i> ≤ 5000</span>) — the number of mice and the number of holes, respectively.</p><p>The second line contains <span class="tex-span"><i>n</i></span> integers <span class="tex-span"><i>x</i><sub class="lower-index">1</sub>, <i>x</i><sub class="lower-index">2</sub>, ..., <i>x</i><sub class="lower-index"><i>n</i></sub></span> (<span class="tex-span"> - 10<sup class="upper-index">9</sup> ≤ <i>x</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">9</sup></span>), where <span class="tex-span"><i>x</i><sub class="lower-index"><i>i</i></sub></span> is the coordinate of <span class="tex-span"><i>i</i></span>th mouse.</p><p>Next <span class="tex-span"><i>m</i></span> lines contain pairs of integer numbers <span class="tex-span"><i>p</i><sub class="lower-index"><i>j</i></sub>, <i>c</i><sub class="lower-index"><i>j</i></sub></span> (<span class="tex-span"> - 10<sup class="upper-index">9</sup> ≤ <i>p</i><sub class="lower-index"><i>j</i></sub> ≤ 10<sup class="upper-index">9</sup>, 1 ≤ <i>c</i><sub class="lower-index"><i>j</i></sub> ≤ 5000</span>), where <span class="tex-span"><i>p</i><sub class="lower-index"><i>j</i></sub></span> is the coordinate of <span class="tex-span"><i>j</i></span>th hole, and <span class="tex-span"><i>c</i><sub class="lower-index"><i>j</i></sub></span> is the maximum number of mice that can hide in the hole <span class="tex-span"><i>j</i></span>.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print one integer number — the minimum sum of distances. If there is no solution, print <span class="tex-font-style-tt">-1</span> instead.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>4 5<br />6 2 8 9<br />3 6<br />2 1<br />3 6<br />4 7<br />4 7<br /></pre></div><div class="output"><div class="title">Output</div><pre>11<br /></pre></div><div class="input"><div class="title">Input</div><pre>7 2<br />10 20 30 40 50 45 35<br />-1000000000 10<br />1000000000 1<br /></pre></div><div class="output"><div class="title">Output</div><pre>7000000130<br /></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")
+                && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+                && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+    </div>
+
+    <br style="clear: both;"/>
+
+    <div id="footer">
+        <div><a href="https://codeforces.com/">Codeforces</a> (c) Copyright 2010-2019 Mike Mirzayanov</div>
+        <div>The only programming contests Web 2.0 platform</div>
+
+    </div>
+
+</div>
+</body>
+</html>
