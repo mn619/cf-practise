@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int n, k, a[300001];
+int n, k, a[300001], p[300002];
 
 signed main()
 {
@@ -19,25 +19,19 @@ signed main()
 
 	cin>>n>>k;
 	fr(i, 1, n + 1) cin>>a[i];
+	if(n == 1) return cout<<a[1], 0;
 
-	int p = n, ans = 0;
-	
-	while(k > 1){
-		int sm = 0, mxsum = a[p], mxind = p;
-		for(int j = p; j >= k; j--){
-			sm += a[j];
-			if(sm > mxsum){
-				mxsum = sm;
-				mxind = j;
-			}
-		}
-		p = mxind - 1;
-		ans += mxsum*k;
-		k--;
+	for(int i = n; i >= 1; i--){
+		p[i] = p[i + 1] + a[i];
 	}
 
-	for(int j = p; j >= 1; j--){
-		ans += a[j];
+	int ans = p[1];
+
+	sort(p + 2, p + n + 1);
+	reverse(p + 2, p + n + 1);
+
+	fr(i, 2, k + 1){
+		ans += p[i];
 	}
 
 	cout<<ans;

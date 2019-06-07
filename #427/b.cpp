@@ -8,7 +8,9 @@
 
 using namespace std;
 
-int n, m;
+int k, cnt[10];
+string n;
+
 
 signed main()
 {
@@ -17,5 +19,27 @@ signed main()
 	#endif
  	FLASH
 
- 		
+ 	cin>>k>>n;
+ 	int l = n.size();
+
+ 	int sm = 0;
+ 	fr(i, 0, l){
+ 		sm += n[i] - '0';
+ 		cnt[n[i] - '0']++;
+ 	}
+
+ 	int req = k - sm;
+ 	int ans = 0;
+
+ 	fr(i ,0, 10){
+ 		fr(j, 0, cnt[i]){
+ 			if(req <= 0 ) break;
+ 			req -= 9 - i;
+ 			ans++;
+ 		}	
+ 		if(req <= 0) break;
+ 	}
+ 	
+ 	cout<<ans;
+
 }

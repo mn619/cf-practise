@@ -8,14 +8,22 @@
 
 using namespace std;
 
-int n, m;
-
 signed main()
 {
 	#ifndef ONLINE_JUDGE
 	FILEIO
 	#endif
- 	FLASH
+ 	FLASH	
 
- 		
+ 	int s, v1, v2, t1, t2;
+ 	cin>>s>>v1>>v2>>t1>>t2;
+
+ 	int a = s*v1 + 2*t1;
+ 	int b = s*v2 + 2*t2;
+ 	cout<<a<<" "<<b<<'\n';
+
+ 	if(a > b) cout<<"Second";
+ 	else if(a < b) cout<<"First";
+ 	else cout<<"Friendship";
+
 }

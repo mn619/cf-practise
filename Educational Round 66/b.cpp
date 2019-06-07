@@ -16,43 +16,40 @@ signed main()
 	FILEIO
 	#endif
  	FLASH
-
- 	cin>>l;
- 	int maxn = 1;
+ 	
+ 	int maxn =1;
  	fr(i, 1, 33) maxn *= 2;
  	maxn--;
 
+ 	cin>>l;
 
- 	int ans = 0, p = 0;
- 	stack <pair<int, int>> fs;
-
+ 	stack <pair<int ,int>> s;
+ 	s.push({1, 0});
+ 	
  	fr(i, 1, l + 1){
  		string cm;
  		cin>>cm;
  		if(cm == "for"){
  			int t;
  			cin>>t;
- 			fs.push({t, 0});
- 			if(ans + p*t > maxn || ans + p*t < 0) return cout<<"OVERFLOW!!!\n", 0;
+ 			s.push({t, 0});
  		}
  		else if(cm == "add"){
- 			if(fs.empty()){
- 				ans++;
- 			}
- 			else{
-	 			pair <int ,int> p = fs.top();
-	 			fs.pop();
-	 			p.second++;
-	 			fs.push(p);
- 			}
- 		}
+ 			auto x = s.top();
+ 			s.pop();
+ 			x.second += x.first;
+ 			s.push(x);
+ 		}	
  		else{
- 			p = (p + fs.top().second)*fs.top().first;
- 			fs.pop();
+ 			auto x = s.top();
+ 			s.pop();
+ 			s.top().second += x.second*s.top().first;
  		}
- 		if(fs.empty()){ans += p; p = 0;}
- 		if(ans + p > maxn || ans + p < 0) return cout<<"OVERFLOW!!!\n", 0;
+ 		if(s.top().second >  maxn) return cout<<"OVERFLOW!!!", 0;
  	}
- 	if(ans > maxn) return cout<<"OVERFLOW!!!\n", 0;
- 	cout<<ans<<'\n';
+ 	
+ 	assert(s.size() == 1);
+
+	if(s.top().second >  maxn) return cout<<"OVERFLOW!!!", 0;
+	cout<<s.top().second;
 }
