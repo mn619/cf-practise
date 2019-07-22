@@ -5,17 +5,20 @@
 #define fr(i,a,b) for(int i=a;i<b;i++)
 #define mod 1000000007
 #define FILEIO freopen("/home/aman/Desktop/Kachda/input.txt", "r", stdin); freopen("/home/aman/Desktop/Kachda/output.txt", "w", stdout);
+#define maxn 200000
 
 using namespace std;
 
 signed main()
 {
-	
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
-
-
+ 	int tests;
+ 	cin>>tests;
+ 	
+ 	while(tests--){
+ 		int n, s, t;
+ 		cin>>n>>s>>t;
+ 		cout<<max(n - s, n - t) + 1<<'\n';
+ 	}	
 }

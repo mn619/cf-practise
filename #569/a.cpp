@@ -10,12 +10,19 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n;
+ 	cin>>n;
 
+ 	int ans = 1, cnt = 0;
+ 	fr(i ,2, n + 1){
+ 		ans += cnt*4 + 4;
+ 		cnt++;
+ 	}
 
+ 	cout<<ans;
 }

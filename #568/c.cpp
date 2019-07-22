@@ -8,14 +8,31 @@
 
 using namespace std;
 
+int n, m, t[200001], cnt[101];
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	cin>>n>>m;
 
+ 	fr(i, 1, n + 1){
+ 		cin>>t[i];
+ 	}
+
+ 	fr(i, 1, n + 1){
+ 		int sum = t[i], in = 0;
+
+ 		fr(j, 1, 101){
+ 			if(sum + j > m) break;
+ 			int take = min((m - sum)/j, cnt[j]);
+ 			in += take;
+ 			sum += take*j;
+ 		}
+ 		cnt[t[i]]++;
+ 		cout<<i - 1 - in<<" ";
+ 	}
 
 }

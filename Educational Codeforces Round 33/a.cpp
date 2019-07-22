@@ -8,14 +8,24 @@
 
 using namespace std;
 
+int n, a[101];
+
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
-
-
+ 	cin>>n;
+ 	int spec = 3;
+ 	
+ 	fr(i, 1, n + 1){
+ 		cin>>a[i];
+ 		if(a[i] == spec) return cout<<"NO\n", 0;
+ 		else{
+ 			spec = 6 - a[i] - spec;
+ 		}
+ 	}
+ 	cout<<"YES\n";
 }

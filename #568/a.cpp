@@ -10,12 +10,15 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+	int a[4], d;
+	cin>>a[1]>>a[2]>>a[3]>>d;
+	sort(a + 1, a + 4);
 
-
+	int ans = max((int) 0, (d - (a[2] - a[1]))) +  max((int) 0, (d - (a[3] - a[2])));	
+ 	cout<<ans;
 }

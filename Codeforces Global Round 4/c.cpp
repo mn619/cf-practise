@@ -3,19 +3,33 @@
 #define pb push_back
 #define int long long
 #define fr(i,a,b) for(int i=a;i<b;i++)
-#define mod 1000000007
+#define mod 998244353
 #define FILEIO freopen("/home/aman/Desktop/Kachda/input.txt", "r", stdin); freopen("/home/aman/Desktop/Kachda/output.txt", "w", stdout);
+#define maxn 200000
 
 using namespace std;
 
+int w, h;
+
+int power(int a, int b, int m)
+{
+    int ans = 1;
+    a %= m;
+    while(b){
+        if(b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
+}
+
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
-
-
+	cin>>w>>h;
+	cout<<power(2, h + w, mod); 	
 }

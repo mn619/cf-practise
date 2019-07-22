@@ -5,17 +5,20 @@
 #define fr(i,a,b) for(int i=a;i<b;i++)
 #define mod 1000000007
 #define FILEIO freopen("/home/aman/Desktop/Kachda/input.txt", "r", stdin); freopen("/home/aman/Desktop/Kachda/output.txt", "w", stdout);
+#define maxn 200000
 
 using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n, m, k;
+ 	cin>>n>>m>>k;
 
-
+ 	if(min(m, k) >= n) return cout<<"Yes", 0;
+ 	cout<<"No";	
 }

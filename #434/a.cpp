@@ -10,12 +10,17 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n, k;
+ 	cin>>n>>k;
+ 	int p = 1;
+ 	fr(i, 1, k + 1) p *= 10;
 
-
+ 	int g = __gcd(n, p);
+ 	p /= g;
+ 	cout<<n*p;
 }

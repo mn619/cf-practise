@@ -10,12 +10,25 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n;
+ 	cin>>n;
 
+ 	set <int> s;
+ 	int p = 2;
+ 	fr(i, 1, 16){
+ 		s.insert((p - 1)*(p/2));
+ 		p *= 2;
+ 	}
 
+ 	int ans = 0;
+ 	for(auto x: s){
+ 		if(n%x == 0) ans = x;
+ 	}
+ 	cout<<ans;
+ 	
 }

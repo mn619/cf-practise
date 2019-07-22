@@ -5,17 +5,31 @@
 #define fr(i,a,b) for(int i=a;i<b;i++)
 #define mod 1000000007
 #define FILEIO freopen("/home/aman/Desktop/Kachda/input.txt", "r", stdin); freopen("/home/aman/Desktop/Kachda/output.txt", "w", stdout);
+#define maxn 200000
 
 using namespace std;
 
+int n, h[maxn][2], dp[maxn][2];
+
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	cin>>n;
+ 	fr(i, 1, n + 1) cin>>h[i][0];
+ 	fr(i, 1, n + 1) cin>>h[i][1];
+ 		
+ 	dp[1][0] = h[1][0];
+ 	dp[1][1] = h[1][1];
+ 	
+ 	fr(i, 2, n + 1){
+ 		fr(j, 0, 2){
+ 			dp[i][j] = max(dp[i - 1][!j], dp[i - 2][!j]) + h[i][j];
+ 		}
+ 	}
 
-
+ 	cout<<max(dp[n][0], dp[n][1]);
 }

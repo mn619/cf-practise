@@ -8,14 +8,30 @@
 
 using namespace std;
 
+int ans = 0, n, a[200011];
+map<int, int> cnt;
+
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	cin>>n;
 
+ 	fr(i, 1, n + 1){
+ 		cin>>a[i];
+ 		ans += (-a[i])*(n - i) + (a[i])*(i - 1);
+ 	}
 
+ 	fr(i, 1, n + 1){
+ 		int x = a[i] - 1, y = a[i] + 1;
+ 		if(cnt.count(x)) ans -= cnt[x];
+ 		if(cnt.count(y)) ans += cnt[y];
+
+ 		cnt[a[i]]++;
+ 	}
+
+ 	cout<<ans<<'\n';
 }

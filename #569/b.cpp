@@ -8,14 +8,40 @@
 
 using namespace std;
 
+int n, ans[100001];
+vector<int> a[100001];
+
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
+
+	
 	cin>>n;
 
-	cout<<n + 1;
+	fr(i, 1, n + 1){
+		int x;
+		cin>>x;
+		if(x >= 0){
+			x = -x - 1;
+		}
+		a[i].pb(x);
+		a[i].pb(i);
+	}
 
+	sort(a + 1, a + n + 1);
 
+	if(n&1){
+		a[1][0] = -a[1][0] - 1;
+	}
+
+	fr(i, 1, n + 1){
+		ans[a[i][1]] = a[i][0];
+	}
+
+	fr(i, 1, n + 1){
+		cout<<ans[i]<<" ";
+	}
 }

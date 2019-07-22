@@ -10,12 +10,31 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n;
+ 	cin>>n;
+
+ 	while(n--){
+ 		int x;
+ 		cin>>x;
+
+ 		bool ok = 0;		
+ 		fr(i,0, 100){
+ 			fr(j, 0, 100){
+ 				if(3*i + 7*j == x){
+ 					ok = 1;
+ 					break;
+ 				}
+ 			}
+ 		}
 
 
+ 		if(ok) cout<<"YES\n";
+ 		else cout<<"NO\n";
+ 	}
+ 	
 }

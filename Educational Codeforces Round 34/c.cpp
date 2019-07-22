@@ -10,12 +10,23 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int n;
+ 	cin>>n;
+ 	map <int, int> cnt;
 
+ 	int ans = 0;
+ 	fr(i, 1, n + 1){
+ 		int a;
+ 		cin>>a;
+ 		cnt[a]++;
+ 		ans = max(cnt[a], ans);
+ 	}	
+
+ 	cout<<ans;
 
 }

@@ -10,12 +10,21 @@ using namespace std;
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-	int n;
-	cin>>n;
 
-	cout<<n + 1;
+ 	int x = 0; 
+ 	int n ;
+ 	cin>>n;
+ 	
+ 	fr(i, 1, n + 1){
+ 		int y;
+ 		cin>>y;
+ 		x ^= y;
+ 	}
 
-
+ 	cout<<x;
+ 	
 }
