@@ -10,36 +10,31 @@
 using namespace std;
 
 void solv(){
-	string s;
-	cin>>s;
-
-	int steps = s.size() - 2;
-
-	set <int> c;
-	for(auto x: s) c.insert(x);
-
-	if(s.size() == 2){
-		cout<<"Bash\n";
+	int n;
+	cin>>n;
+	int p[n + 1];
+	int q[n + 1];
+	fr(i, 1, n + 1){
+		cin>>p[i];
+		q[p[i]] = i;
 	}
-	else{
-		steps -= (s[0] == s[s.size() - 1]);
-		steps %= 2;
 
-		if(steps == 0){
-			cout<<"Bash\n";
-		}
-		else cout<<"Chikapu\n";
+	int mn = mod, mx = 0;
+	fr(i, 1, n + 1){
+		mx = max(mx, q[i]);
+		mn = min(mn, q[i]);
+		cout<<(mx - mn + 1 == i);
 	}
+	cout<<'\n';
 }
-
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
 
  	int t;
  	cin>>t;
-
- 	while(t--) solv();
-
+ 	while(t--) solv();	
 }

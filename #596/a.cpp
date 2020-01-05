@@ -9,37 +9,33 @@
 
 using namespace std;
 
-void solv(){
-	string s;
-	cin>>s;
-
-	int steps = s.size() - 2;
-
-	set <int> c;
-	for(auto x: s) c.insert(x);
-
-	if(s.size() == 2){
-		cout<<"Bash\n";
+int lef(int n){
+	int ans = n%10;
+	while(n){
+		ans = n%10;
+		n /= 10;
 	}
-	else{
-		steps -= (s[0] == s[s.size() - 1]);
-		steps %= 2;
-
-		if(steps == 0){
-			cout<<"Bash\n";
-		}
-		else cout<<"Chikapu\n";
-	}
+	return ans;
 }
+
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
 
- 	int t;
- 	cin>>t;
+ 	int a, b;
+ 	cin>>a>>b;
+ 	fr(i, 1, 10000){
+ 		int x = lef(i), y = lef(i + 1);
+ 		if(x == a and y == b){
+ 			cout<<i<<" "<<i + 1<<'\n';
+ 			return 0;
+ 		}
+ 	}
 
- 	while(t--) solv();
-
+ 	cout<<-1;
+ 		
 }

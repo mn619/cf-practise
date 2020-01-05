@@ -9,37 +9,29 @@
 
 using namespace std;
 
-void solv(){
-	string s;
-	cin>>s;
+int n, m;
 
-	int steps = s.size() - 2;
-
-	set <int> c;
-	for(auto x: s) c.insert(x);
-
-	if(s.size() == 2){
-		cout<<"Bash\n";
-	}
-	else{
-		steps -= (s[0] == s[s.size() - 1]);
-		steps %= 2;
-
-		if(steps == 0){
-			cout<<"Bash\n";
-		}
-		else cout<<"Chikapu\n";
-	}
+int power(int a, int b, int m)
+{
+    int ans = 1;
+    a %= m;
+    while(b){
+        if(b & 1) ans = (ans * a) % m;
+        a = (a * a) % m;
+        b >>= 1;
+    }
+    return ans;
 }
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
 
- 	int t;
- 	cin>>t;
-
- 	while(t--) solv();
-
+	cin>>n>>m;	
+	int ans = power(power(2, m, mod) + mod - 1, n, mod);
+	ans %= mod;
+	cout<<ans<<'\n'; 	
 }

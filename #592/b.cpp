@@ -9,37 +9,33 @@
 
 using namespace std;
 
+int n, dp[maxn];
+string s;
+vector <int> vp[]
 void solv(){
-	string s;
-	cin>>s;
-
-	int steps = s.size() - 2;
-
-	set <int> c;
-	for(auto x: s) c.insert(x);
-
-	if(s.size() == 2){
-		cout<<"Bash\n";
+	cin>>n>>s;
+	if(s[0] == '1'){
+		dp[0] = 2;
 	}
-	else{
-		steps -= (s[0] == s[s.size() - 1]);
-		steps %= 2;
+	else dp[0] = 1;
 
-		if(steps == 0){
-			cout<<"Bash\n";
+	fr(i, 1, n){
+		if(s[i] == '1'){
+			dp[i] = 2 + dp[i - 1];
 		}
-		else cout<<"Chikapu\n";
+		else dp[i] = dp[i - 1] + 1;
 	}
+	cout<<dp[n - 1]<<'\n';
 }
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
-
- 	int t;
- 	cin>>t;
-
- 	while(t--) solv();
-
+	
+	int t;
+	cin>>t;
+	while(t--) solv();	
 }

@@ -43,10 +43,10 @@ int main()
 	
 	
 	
-		cout<<1<<" "<<2<<endl;
-		cout<<1<<" "<<3<<endl;
-		cout<<2<<" "<<4<<endl;
-		cout<<3<<" "<<5<<endl;
+	cout<<1<<" "<<2<<endl;
+	cout<<1<<" "<<3<<endl;
+	cout<<2<<" "<<4<<endl;
+	cout<<3<<" "<<5<<endl;
 		
 		
 	for(int i=6;i<=n;i++)

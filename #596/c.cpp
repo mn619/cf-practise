@@ -9,37 +9,32 @@
 
 using namespace std;
 
-void solv(){
-	string s;
-	cin>>s;
-
-	int steps = s.size() - 2;
-
-	set <int> c;
-	for(auto x: s) c.insert(x);
-
-	if(s.size() == 2){
-		cout<<"Bash\n";
+int bitcnt(int n){
+	int ans = 0;
+	while(n){
+		if(n&1) ans++;
+		n /= 2;
 	}
-	else{
-		steps -= (s[0] == s[s.size() - 1]);
-		steps %= 2;
-
-		if(steps == 0){
-			cout<<"Bash\n";
-		}
-		else cout<<"Chikapu\n";
-	}
+	return ans;
 }
 
 signed main()
 {
-	
+	#ifndef ONLINE_JUDGE
+	FILEIO
+	#endif
  	FLASH
 
- 	int t;
- 	cin>>t;
+ 	int n, p;
+ 	cin>>n>>p;
 
- 	while(t--) solv();
+ 	fr(k, 0, 1000001){
+ 		int t = n - k*p;
 
+ 		if(t >= k and bitcnt(t) <= k){
+ 			cout<<k;
+ 			return 0;
+ 		}
+ 	}	
+ 	cout<<-1;	
 }

@@ -9,11 +9,7 @@
 
 using namespace std;
 
-int n, m, dp[300001];
-map<int, int> dp2;
-
-vector<pair<int, int>> v[300001];
-
+int n, a[maxn + 2], p[maxn + 2], s[maxn + 2];
 signed main()
 {
 	#ifndef ONLINE_JUDGE
@@ -21,28 +17,28 @@ signed main()
 	#endif
  	FLASH
 
- 	cin>>n>>m;
- 	fr(i, 1, m + 1){
- 		int a, b, c;
- 		cin>>a>>b>>c;
- 		v[c].pb({a,b});
+ 	cin>>n;
+
+ 	int las = 1, ans = 0;
+ 	fr(i, 1, n + 1){
+ 		cin>>a[i];
+ 		if(a[i] > a[i - 1]) p[i] = i - las + 1;
+ 		else{
+ 			las = i;
+ 			p[i] = 1;
+ 		}
+ 		ans = max(ans, p[i]);
+ 	}		
+ 	las = n;
+ 	for(int i = n; i >= 1; i--){
+ 		if(a[i] < a[i + 1]) s[i] = las - i + 1;
+ 		else las = i, s[i] = 1;
  	}
 
- 	int ans = 0;
-
- 	fr(i, 1, 300001){
-	 	for(auto x: v[i]){
-	 		int a = x.first, b = x.second;
-
-	 		dp2[b] = max(dp2[b], dp[a] + 1);
-	 	}
-	 	
-	 	for(auto x: dp2){
-	 		dp[x.first] = max(dp[x.first], x.second);
-	 	}
-	 	dp2.clear();
+ 	fr(i, 2, n){
+ 		if(a[i - 1] >= a[i + 1]) continue;	
+ 		ans = max(ans, p[i - 1] + s[i + 1]);
  	}
 
- 	fr(i, 1, n + 1) ans = max(ans, dp[i]);
- 	cout<<ans;		
+ 	cout<<ans;
 }
