@@ -25,36 +25,32 @@ signed main()
     #endif
     FLASH
 
-    int t;
-    cin>>t;
+    string s;
+    cin>>s;
 
-    while(t--){
-    	int n;
-    	cin>>n;
-    	int a[n + 1];
-    	bool ok = 1;
+    string t = s;
+    sort(all(t));
 
-    	int cursum = 0, sum = 0, l = 1, r = 1, maxsum = 0;
-    	fr(i, 1, n + 1){
-    		cin>>a[i];
-    		cursum += a[i];
-    		if(cursum <= 0){
-    			l = i + 1;
-    			cursum = 0;
+    do{
+    	vector <int> cnt1(26, 0), cnt2(26, 0);
+    	
+    	bool found = 1;
+    	for(int i = 0; i < (int)t.size() - 1; i++){
+    		cnt1[t[i] - 'a']++;
+    		cnt2[s[i] - 'a']++;
+
+    		bool ok = 0;
+    		fr(j, 0, 26){
+    			if(cnt1[j] != cnt2[j]) ok = 1;
     		}
-    		if(maxsum < cursum){
-    			r = i;
-    			maxsum = cursum;
-    		}
-    		sum += a[i];
-    	}
 
-    	if(l != 1 or r != n or maxsum > cursum){
-    		ok = 0;
+    		if(!ok) found = 0;
+    		// assert(ok);
     	}
-
-    	if(ok)
-    	cout<<"YES\n";
-    	else cout<<"NO\n";
+    	
+		if(found){
+			cout<<t<<'\n';
+		}
     }
+    while(next_permutation(all(t)));
 }
