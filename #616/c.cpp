@@ -54,14 +54,7 @@ signed main()
  		int l = 0, r = (int)temp.size() - 1;
 
  		int ans = 0
- 		set <int> x;
- 		while(l <= r){
- 			int mid = (l + r)>>1;
- 			int j = 0;
- 			fr(i, temp[0], n){
- 				if(temp[j] == 0 and s[i] == 0)
- 			}
- 		}
+ 		
 
  	}
 
