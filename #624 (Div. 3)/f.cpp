@@ -66,35 +66,13 @@ int Bsmol(int node, int vel, int xval){
 	return xval*(ind + 1) - ans;
 }
 
-int Bbig(int node,int vel, int xval){
-	int L = 0, R = (int)seg[node].size() - 1;
-	int ans = seg[node][R].S, ind = (int)seg[node].size();
-	while(L <= R){
-		int M = (L + R)>>1;
-		if(seg[node][M].F.F >= vel){
-			ind = M;
-			ans = (M > 0)?seg[node][M - 1].S: 0;
-			R = M - 1;
-		}
-		else L = M + 1;
-	}
-
-	int len = (int)seg[node].size();
-	ans = seg[node][len - 1].S - ans;
-
-	ans -= xval*((int)seg[node].size() - ind);
-	assert(ans >= 0);
-	return ans;
-}
-
-int queri(int l1, int r1, int val, bool smol, int xval, int l, int r, int node){
+int queri(int l1, int r1, int val, int xval, int l, int r, int node){
 	if(l1 > r or r1 < l) return 0;
 	if(l1 <= l and r <= r1){
-		if(smol) return Bsmol(node, val, xval);
-		else return Bbig(node, val, xval);	
+		return Bsmol(node, val, xval);
 	}
 	int mid = (l + r)>>1;
-	return queri(l1, r1, val, smol, xval, l, mid, 2*node) + queri(l1, r1, val, smol, xval, mid + 1, r, 2*node + 1);
+	return queri(l1, r1, val, xval, l, mid, 2*node) + queri(l1, r1, val, xval, mid + 1, r, 2*node + 1);
 }
 
 signed main()
@@ -114,12 +92,9 @@ signed main()
 
     int ans = 0;
     fr(i, 1, n + 1){
-    	int a = ((i > 1)?queri(1, i - 1, p[i].S, 1, p[i].F, 1, n, 1):0);
-    	int b = ((i < n)?queri(i + 1, n, p[i].S, 0, p[i].F, 1, n, 1):0);
-    	int temp = a + b;
+    	int temp = ((i > 1)?queri(1, i - 1, p[i].S,p[i].F, 1, n, 1):0);
     	ans += temp;
     }
 
-    ans /= 2;
     cout<<ans<<'\n';
 }
